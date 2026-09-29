@@ -1,0 +1,15 @@
+ashish-portfolio/
+│
+├── index.html              ← Main portfolio page (home)
+├── form.html               ← Contact page (2 forms: individual + school)
+├── style.css               ← All styling (dark + light theme)
+├── theme.js                ← Dark/Light toggle + auto-detect
+├── script.js               ← Typing animation, mobile menu
+│
+└── assets/                 ← All images & files go here
+    ├── ashish.jpg          ← Your profile photo
+    ├── favicon.png         ← Small icon in browser tab (optional)
+    └── projects/           ← Screenshots of your projects (optional)
+        ├── trading-bot.jpg
+        ├── jarvis.jpg
+        └── ...

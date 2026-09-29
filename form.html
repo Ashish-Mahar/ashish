@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Contact Ashish Mahar — for AI website development, robotics workshops, IoT projects, or cyber security awareness training."/>
+  <title>Contact | Ashish Mahar</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+
+  <!-- Auto theme (same as index) -->
+  <script>
+    (function() {
+      const saved = localStorage.getItem('ashish-portfolio-theme');
+      const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      const theme = saved || (prefersLight ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <!-- Form-specific styles
+  <style>
+    .form-page {
+      padding: 120px 24px 70px;
+      min-height: 100vh;
+      background: var(--hero-bg);
+      transition: background 0.4s ease;
+    }
+
+    .form-page-container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+      font-weight: 800;
+      color: var(--heading);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .page-title span {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .page-sub {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 50px;
+      font-size: 1rem;
+    }
+
+    /* Tabs */
+    .form-tabs {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .form-tab {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      color: var(--text-muted);
+      padding: 14px 28px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .form-tab:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .form-tab.active {
+      background: var(--gradient-btn);
+      color: #fff;
+      border-color: transparent;
+      box-shadow: var(--shadow-glow);
+    }
+
+    .form-tab .tab-icon { font-size: 1.15rem; }
+
+    /* Form wrapper */
+    .form-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 45px 40px;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient);
+    }
+
+    .form-head {
+      margin-bottom: 30px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .form-head h2 {
+      color: var(--heading);
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 8px;
+    }
+
+    .form-head p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .form-section { display: none; }
+    .form-section.active {
+      display: block;
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Grid layout for form fields */
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .form-grid .full { grid-column: 1 / -1; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group label {
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.01em;
+    }
+
+    .form-group label .req {
+      color: var(--accent);
+      margin-left: 3px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 13px 15px;
+      border-radius: 11px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: 0.25s;
+      width: 100%;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: var(--text-dim);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: var(--bg-card);
+      box-shadow: 0 0 0 4px var(--accent-glow);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+      font-family: inherit;
+    }
+
+    .form-group select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 16px;
+      padding-right: 42px;
+    }
+
+    .form-group select option {
+      background: var(--bg-card);
+      color: var(--text);
+    }
+
+    /* Checkbox row */
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      grid-column: 1 / -1;
+      margin-top: 6px;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 3px;
+      accent-color: var(--accent);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .checkbox-row label {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      font-weight: 400;
+      cursor: pointer;
+      line-height: 1.55;
+    }
+
+    .submit-row {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .submit-row .btn {
+      min-width: 220px;
+      padding: 15px 34px;
+      font-size: 0.98rem;
+    }
+
+    /* Success / info message */
+    .form-note {
+      margin-top: 26px;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: var(--accent-glow);
+      border: 1px solid var(--accent);
+      color: var(--text);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .form-note strong { color: var(--accent); }
+
+    /* Quick contact strip below forms */
+    .quick-contact-strip {
+      margin-top: 55px;
+      padding: 30px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .quick-contact-strip h3 {
+      color: var(--heading);
+      margin-bottom: 20px;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .quick-contact-strip .quick-contact {
+      margin-top: 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      .form-page { padding: 100px 18px 50px; }
+      .form-wrapper { padding: 32px 22px; }
+      .form-grid { grid-template-columns: 1fr; gap: 16px; }
+      .form-tab { padding: 12px 20px; font-size: 0.88rem; }
+      .form-tab .tab-icon { font-size: 1rem; }
+      .submit-row .btn { width: 100%; }
+    }
+  </style> -->
+</head>
+<body>
+
+<!-- ═══════════════ NAVBAR ═══════════════ -->
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">AM</span>
+      <span class="logo-text">Ashish<span class="dot">.</span>Mahar</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#workshops">Workshops</a></li>
+      <li><a href="form.html" class="active-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="icon-sun">☀️</span>
+        <span class="icon-moon">🌙</span>
+      </button>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════ FORM PAGE ═══════════════ -->
+<main class="form-page">
+  <div class="form-page-container">
+
+    <h1 class="page-title">Let's <span>Work Together</span></h1>
+    <p class="page-sub">
+      Whether you need a website, a workshop, or a custom project — pick the form that fits you.
+      I usually reply within <strong style="color:var(--accent)">24 hours</strong>.
+    </p>
+
+    <!-- Tabs -->
+    <div class="form-tabs">
+      <button class="form-tab active" data-target="individual">
+        <span class="tab-icon">👤</span>
+        I'm an Individual
+      </button>
+      <button class="form-tab" data-target="school">
+        <span class="tab-icon">🏫</span>
+        I Represent a School / Institute
+      </button>
+    </div>
+
+    <!-- ════ FORM WRAPPER ════ -->
+    <div class="form-wrapper">
+
+      <!-- ═══════════════════════════════════════════
+           FORM 1 — INDIVIDUAL CLIENT
+           Netlify form name: "individual"
+           ═══════════════════════════════════════════ -->
+      <section class="form-section active" id="individual">
+
+        <div class="form-head">
+          <h2>👤 Individual Inquiry</h2>
+          <p>For personal projects, websites, IoT builds, or 1-on-1 tutoring.</p>
+        </div>
+
+        <form
+          name="individual"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/form.html?success=individual"
+        >
+          <!-- Required by Netlify -->
+          <input type="hidden" name="form-name" value="individual"/>
+          <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field"/></label>
+          </p>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="ind-name">Full Name <span class="req">*</span></label>
+              <input type="text" id="ind-name" name="name" placeholder="e.g. Rahul Sharma" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="ind-email">Email <span class="req">*</span></label>
+              <input type="email" id="ind-email" name="email" placeholder="you@example.com" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="ind-phone">Phone / WhatsApp</label>
+              <input type="tel" id="ind-phone" name="phone" placeholder="+91 9XXXXXXXXX"/>
+            </div>
+
+            <div class="form-group">
+              <label for="ind-city">City / Location</label>
+              <input type="text" id="ind-city" name="city" placeholder="e.g. Pithoragarh"/>
+            </div>
+
+            <div class="form-group full">
+              <label for="ind-service">What do you need? <span class="req">*</span></label>
+              <select id="ind-service" name="service" required>
+                <option value="">— Select a service —</option>
+                <option>AI Website Development</option>
+                <option>IoT Project (Arduino / NodeMCU)</option>
+                <option>Python Automation / Bot</option>
+                <option>Cyber Security Consultation</option>
+                <option>1-on-1 Tutoring</option>
+                <option>Other (mention below)</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="ind-budget">Approximate Budget (optional)</label>
+              <select id="ind-budget" name="budget">
+                <option value="">— Select budget range —</option>
+                <option>Below ₹2,000</option>
+                <option>₹2,000 – ₹5,000</option>
+                <option>₹5,000 – ₹15,000</option>
+                <option>₹15,000 – ₹50,000</option>
+                <option>Above ₹50,000</option>
+                <option>Not sure — need guidance</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="ind-message">Tell me about your project <span class="req">*</span></label>
+              <textarea
+                id="ind-message"
+                name="message"
+                placeholder="Describe what you want to build, timeline, and any specific features..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="checkbox-row">
+              <input type="checkbox" id="ind-consent" name="consent" required/>
+              <label for="ind-consent">
+                I agree to be contacted by Ashish Mahar regarding this inquiry.
+              </label>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn primary">Send Inquiry →</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           FORM 2 — SCHOOL / INSTITUTE
+           Netlify form name: "school"
+           ═══════════════════════════════════════════ -->
+      <section class="form-section" id="school">
+
+        <div class="form-head">
+          <h2>🏫 School / Institute Inquiry</h2>
+          <p>For booking robotics, cyber security, or AI workshops at your school.</p>
+        </div>
+
+        <form
+          name="school"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/form.html?success=school"
+        >
+          <input type="hidden" name="form-name" value="school"/>
+          <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field"/></label>
+          </p>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="sch-name">Your Full Name <span class="req">*</span></label>
+              <input type="text" id="sch-name" name="contact_person" placeholder="e.g. Mrs. Sharma" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="sch-role">Your Role <span class="req">*</span></label>
+              <select id="sch-role" name="role" required>
+                <option value="">— Select —</option>
+                <option>Principal</option>
+                <option>Vice Principal</option>
+                <option>Teacher</option>
+                <option>Coordinator</option>
+                <option>Trustee / Management</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="form-group full">
+              <label for="sch-school">School / Institute Name <span class="req">*</span></label>
+              <input type="text" id="sch-school" name="school_name" placeholder="e.g. Himalaya Public School" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="sch-email">Official Email <span class="req">*</span></label>
+              <input type="email" id="sch-email" name="email" placeholder="school@example.com" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="sch-phone">Phone / WhatsApp <span class="req">*</span></label>
+              <input type="tel" id="sch-phone" name="phone" placeholder="+91 9XXXXXXXXX" required/>
+            </div>
+
+            <div class="form-group full">
+              <label for="sch-address">School Address / City <span class="req">*</span></label>
+              <input type="text" id="sch-address" name="address" placeholder="e.g. Pithoragarh, Uttarakhand" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="sch-topic">Workshop Topic <span class="req">*</span></label>
+              <select id="sch-topic" name="topic" required>
+                <option value="">— Select a topic —</option>
+                <option>Robotics with Arduino</option>
+                <option>IoT & Smart Devices (NodeMCU)</option>
+                <option>Cyber Safety & Phishing Awareness</option>
+                <option>Python Programming Basics</option>
+                <option>AI Tools for Students</option>
+                <option>Multiple / Full STEM Workshop</option>
+                <option>Other (mention below)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="sch-students">Number of Students <span class="req">*</span></label>
+              <input type="number" id="sch-students" name="students" placeholder="e.g. 60" min="1" required/>
+            </div>
+
+            <div class="form-group">
+              <label for="sch-class">Class / Grade Range</label>
+              <input type="text" id="sch-class" name="class_range" placeholder="e.g. Class 8–10"/>
+            </div>
+
+            <div class="form-group">
+              <label for="sch-date">Preferred Date</label>
+              <input type="date" id="sch-date" name="preferred_date"/>
+            </div>
+
+            <div class="form-group full">
+              <label for="sch-message">Additional Details</label>
+              <textarea
+                id="sch-message"
+                name="message"
+                placeholder="Duration needed, budget, special requirements, etc."
+              ></textarea>
+            </div>
+
+            <div class="checkbox-row">
+              <input type="checkbox" id="sch-consent" name="consent" required/>
+              <label for="sch-consent">
+                I confirm I'm authorized to book a workshop on behalf of this school/institute.
+              </label>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn primary">Book Workshop →</button>
+          </div>
+        </form>
+      </section>
+
+    </div><!-- /form-wrapper -->
+
+    <!-- Quick contact strip -->
+    <div class="quick-contact-strip">
+      <h3>Prefer to reach out directly?</h3>
+      <div class="quick-contact">
+        <a href="mailto:ashishmahar.in@gmail.com" class="quick-item">
+          <span>📧</span> ashishmahar.in@gmail.com
+        </a>
+        <a href="https://wa.me/919760651947" class="quick-item" target="_blank">
+          <span>💬</span> +91 97606 51947
+        </a>
+        <span class="quick-item">
+          <span>📍</span> Pithoragarh, Uttarakhand
+        </span>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-mark">AM</span>
+        <span class="logo-text">Ashish<span class="dot">.</span>Mahar</span>
+      </div>
+      <p>Student. Builder. Teacher.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#workshops">Workshops</a>
+      <a href="form.html">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <a href="mailto:ashishmahar.in@gmail.com">Email</a>
+      <a href="https://wa.me/919760651947" target="_blank">WhatsApp</a>
+      <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> <strong>Ashish Mahar</strong> • Pithoragarh, Uttarakhand</p>
+    <p class="small">Built with ❤️ using AI tools</p>
+  </div>
+</footer>
+
+<a href="#" class="back-top" id="backTop" aria-label="Back to top">↑</a>
+
+<!-- Scripts -->
+<script src="theme.js"></script>
+<script src="script.js"></script>
+
+<!-- Form page script -->
+<script>
+  /* ─── TAB SWITCHING ─── */
+  const tabs = document.querySelectorAll('.form-tab');
+  const sections = document.querySelectorAll('.form-section');
+
+  function switchTab(target) {
+    tabs.forEach(t => t.classList.toggle('active', t.dataset.target === target));
+    sections.forEach(s => s.classList.toggle('active', s.id === target));
+
+    // Update URL hash without jump
+    history.replaceState(null, '', '#' + target);
+
+    // Smooth scroll to form
+    const wrapper = document.querySelector('.form-wrapper');
+    if (wrapper) {
+      const top = wrapper.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => switchTab(tab.dataset.target));
+  });
+
+  /* ─── OPEN CORRECT TAB FROM URL HASH ─── */
+  (function openFromHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash === 'school' || hash === 'individual') {
+      switchTab(hash);
+    }
+  })();
+
+  /* ─── SHOW SUCCESS MESSAGE AFTER NETLIFY REDIRECT ─── */
+  (function showSuccess() {
+    const params = new URLSearchParams(window.location.search);
+    const success = params.get('success');
+    if (!success) return;
+
+    const msg = success === 'school'
+      ? '🏫 Thank you! Your workshop booking request has been received. I\'ll reply within 24 hours.'
+      : '✅ Thank you! Your inquiry has been received. I\'ll get back to you within 24 hours.';
+
+    const note = document.createElement('div');
+    note.className = 'form-note';
+    note.innerHTML = '<strong>Message Sent Successfully!</strong><br/>' + msg;
+    document.querySelector('.form-tabs').after(note);
+
+    // Auto-switch to correct tab (in case of refresh)
+    switchTab(success);
+  })();
+</script>
+
+</body>
+</html>
