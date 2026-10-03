@@ -6,9 +6,8 @@
   <meta name="description" content="Contact Ashish Mahar — for AI website development, robotics workshops, IoT projects, or cyber security awareness training."/>
   <title>Contact | Ashish Mahar</title>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"/>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
 
-  <!-- Auto theme (same as index) -->
   <script>
     (function() {
       const saved = localStorage.getItem('ashish-portfolio-theme');
@@ -17,300 +16,13 @@
       document.documentElement.setAttribute('data-theme', theme);
     })();
   </script>
-
-  <!-- Form-specific styles
-  <style>
-    .form-page {
-      padding: 120px 24px 70px;
-      min-height: 100vh;
-      background: var(--hero-bg);
-      transition: background 0.4s ease;
-    }
-
-    .form-page-container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .page-title {
-      text-align: center;
-      font-size: clamp(1.9rem, 4.5vw, 2.6rem);
-      font-weight: 800;
-      color: var(--heading);
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-
-    .page-title span {
-      background: var(--gradient);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .page-sub {
-      text-align: center;
-      color: var(--text-muted);
-      max-width: 620px;
-      margin: 0 auto 50px;
-      font-size: 1rem;
-    }
-
-    /* Tabs */
-    .form-tabs {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .form-tab {
-      background: var(--bg-card);
-      border: 2px solid var(--border);
-      color: var(--text-muted);
-      padding: 14px 28px;
-      border-radius: 14px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      font-family: inherit;
-      transition: 0.3s;
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    .form-tab:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-2px);
-    }
-
-    .form-tab.active {
-      background: var(--gradient-btn);
-      color: #fff;
-      border-color: transparent;
-      box-shadow: var(--shadow-glow);
-    }
-
-    .form-tab .tab-icon { font-size: 1.15rem; }
-
-    /* Form wrapper */
-    .form-wrapper {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 45px 40px;
-      box-shadow: var(--shadow-card);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .form-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 4px;
-      background: var(--gradient);
-    }
-
-    .form-head {
-      margin-bottom: 30px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .form-head h2 {
-      color: var(--heading);
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-      margin-bottom: 8px;
-    }
-
-    .form-head p {
-      color: var(--text-muted);
-      font-size: 0.94rem;
-    }
-
-    .form-section { display: none; }
-    .form-section.active {
-      display: block;
-      animation: fadeIn 0.4s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* Grid layout for form fields */
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    .form-grid .full { grid-column: 1 / -1; }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 7px;
-    }
-
-    .form-group label {
-      font-size: 0.87rem;
-      font-weight: 600;
-      color: var(--text);
-      letter-spacing: 0.01em;
-    }
-
-    .form-group label .req {
-      color: var(--accent);
-      margin-left: 3px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 13px 15px;
-      border-radius: 11px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      transition: 0.25s;
-      width: 100%;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: var(--text-dim);
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--accent);
-      background: var(--bg-card);
-      box-shadow: 0 0 0 4px var(--accent-glow);
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-      font-family: inherit;
-    }
-
-    .form-group select {
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 14px center;
-      background-size: 16px;
-      padding-right: 42px;
-    }
-
-    .form-group select option {
-      background: var(--bg-card);
-      color: var(--text);
-    }
-
-    /* Checkbox row */
-    .checkbox-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      grid-column: 1 / -1;
-      margin-top: 6px;
-    }
-
-    .checkbox-row input[type="checkbox"] {
-      width: 18px;
-      height: 18px;
-      margin-top: 3px;
-      accent-color: var(--accent);
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    .checkbox-row label {
-      font-size: 0.87rem;
-      color: var(--text-muted);
-      font-weight: 400;
-      cursor: pointer;
-      line-height: 1.55;
-    }
-
-    .submit-row {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .submit-row .btn {
-      min-width: 220px;
-      padding: 15px 34px;
-      font-size: 0.98rem;
-    }
-
-    /* Success / info message */
-    .form-note {
-      margin-top: 26px;
-      padding: 16px 20px;
-      border-radius: 12px;
-      background: var(--accent-glow);
-      border: 1px solid var(--accent);
-      color: var(--text);
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    .form-note strong { color: var(--accent); }
-
-    /* Quick contact strip below forms */
-    .quick-contact-strip {
-      margin-top: 55px;
-      padding: 30px 24px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      text-align: center;
-    }
-
-    .quick-contact-strip h3 {
-      color: var(--heading);
-      margin-bottom: 20px;
-      font-size: 1.15rem;
-      font-weight: 700;
-    }
-
-    .quick-contact-strip .quick-contact {
-      margin-top: 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 700px) {
-      .form-page { padding: 100px 18px 50px; }
-      .form-wrapper { padding: 32px 22px; }
-      .form-grid { grid-template-columns: 1fr; gap: 16px; }
-      .form-tab { padding: 12px 20px; font-size: 0.88rem; }
-      .form-tab .tab-icon { font-size: 1rem; }
-      .submit-row .btn { width: 100%; }
-    }
-  </style> -->
 </head>
 <body>
 
-<!-- ═══════════════ NAVBAR ═══════════════ -->
 <nav class="navbar">
   <div class="nav-container">
     <a href="index.html" class="logo">
-      <span class="logo-mark">AM</span>
+      <img src="assets/favicon.svg" alt="AM Logo" class="logo-img" width="36" height="36"/>
       <span class="logo-text">Ashish<span class="dot">.</span>Mahar</span>
     </a>
 
@@ -335,7 +47,6 @@
   </div>
 </nav>
 
-<!-- ═══════════════ FORM PAGE ═══════════════ -->
 <main class="form-page">
   <div class="form-page-container">
 
@@ -345,7 +56,6 @@
       I usually reply within <strong style="color:var(--accent)">24 hours</strong>.
     </p>
 
-    <!-- Tabs -->
     <div class="form-tabs">
       <button class="form-tab active" data-target="individual">
         <span class="tab-icon">👤</span>
@@ -357,13 +67,9 @@
       </button>
     </div>
 
-    <!-- ════ FORM WRAPPER ════ -->
     <div class="form-wrapper">
 
-      <!-- ═══════════════════════════════════════════
-           FORM 1 — INDIVIDUAL CLIENT
-           Netlify form name: "individual"
-           ═══════════════════════════════════════════ -->
+      <!-- FORM 1 — INDIVIDUAL -->
       <section class="form-section active" id="individual">
 
         <div class="form-head">
@@ -376,9 +82,8 @@
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/form.html?success=individual"
+          action="/?submitted=individual"
         >
-          <!-- Required by Netlify -->
           <input type="hidden" name="form-name" value="individual"/>
           <p style="display:none">
             <label>Don't fill this out: <input name="bot-field"/></label>
@@ -455,10 +160,7 @@
         </form>
       </section>
 
-      <!-- ═══════════════════════════════════════════
-           FORM 2 — SCHOOL / INSTITUTE
-           Netlify form name: "school"
-           ═══════════════════════════════════════════ -->
+      <!-- FORM 2 — SCHOOL -->
       <section class="form-section" id="school">
 
         <div class="form-head">
@@ -471,7 +173,7 @@
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/form.html?success=school"
+          action="/?submitted=school"
         >
           <input type="hidden" name="form-name" value="school"/>
           <p style="display:none">
@@ -569,9 +271,8 @@
         </form>
       </section>
 
-    </div><!-- /form-wrapper -->
+    </div>
 
-    <!-- Quick contact strip -->
     <div class="quick-contact-strip">
       <h3>Prefer to reach out directly?</h3>
       <div class="quick-contact">
@@ -590,12 +291,11 @@
   </div>
 </main>
 
-<!-- ═══════════════ FOOTER ═══════════════ -->
 <footer>
   <div class="footer-content">
     <div class="footer-brand">
       <div class="logo">
-        <span class="logo-mark">AM</span>
+        <img src="assets/favicon.svg" alt="AM Logo" class="logo-img" width="36" height="36"/>
         <span class="logo-text">Ashish<span class="dot">.</span>Mahar</span>
       </div>
       <p>Student. Builder. Teacher.</p>
@@ -628,13 +328,10 @@
 
 <a href="#" class="back-top" id="backTop" aria-label="Back to top">↑</a>
 
-<!-- Scripts -->
 <script src="theme.js"></script>
 <script src="script.js"></script>
 
-<!-- Form page script -->
 <script>
-  /* ─── TAB SWITCHING ─── */
   const tabs = document.querySelectorAll('.form-tab');
   const sections = document.querySelectorAll('.form-section');
 
@@ -642,10 +339,8 @@
     tabs.forEach(t => t.classList.toggle('active', t.dataset.target === target));
     sections.forEach(s => s.classList.toggle('active', s.id === target));
 
-    // Update URL hash without jump
     history.replaceState(null, '', '#' + target);
 
-    // Smooth scroll to form
     const wrapper = document.querySelector('.form-wrapper');
     if (wrapper) {
       const top = wrapper.getBoundingClientRect().top + window.scrollY - 100;
@@ -657,31 +352,11 @@
     tab.addEventListener('click', () => switchTab(tab.dataset.target));
   });
 
-  /* ─── OPEN CORRECT TAB FROM URL HASH ─── */
   (function openFromHash() {
     const hash = window.location.hash.replace('#', '');
     if (hash === 'school' || hash === 'individual') {
       switchTab(hash);
     }
-  })();
-
-  /* ─── SHOW SUCCESS MESSAGE AFTER NETLIFY REDIRECT ─── */
-  (function showSuccess() {
-    const params = new URLSearchParams(window.location.search);
-    const success = params.get('success');
-    if (!success) return;
-
-    const msg = success === 'school'
-      ? '🏫 Thank you! Your workshop booking request has been received. I\'ll reply within 24 hours.'
-      : '✅ Thank you! Your inquiry has been received. I\'ll get back to you within 24 hours.';
-
-    const note = document.createElement('div');
-    note.className = 'form-note';
-    note.innerHTML = '<strong>Message Sent Successfully!</strong><br/>' + msg;
-    document.querySelector('.form-tabs').after(note);
-
-    // Auto-switch to correct tab (in case of refresh)
-    switchTab(success);
   })();
 </script>
 
